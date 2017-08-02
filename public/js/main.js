@@ -5,7 +5,7 @@ import {Router, Route, IndexRoute, browserHistory} from 'react-router';
 import User from "./container/user";
 import AddUser from "./container/addUser";
 import reducer from "./reducer/index";
-import Home from "./container/home";
+import Home from "./container/getAll";
 import {createStore, applyMiddleware} from 'redux';
 import addMiddleware from "./middleware/add";
 
