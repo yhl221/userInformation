@@ -1,6 +1,23 @@
 import React, {Component} from "react";
 
 class AddUser extends Component {
+
+    onSubmit(){
+         var userName=document.getElementById("userName").value;
+        var name=document.getElementById("name").value;
+        var age=document.getElementById("age").value;
+        var sex=document.getElementById("sex").value;
+        var phone=document.getElementById("phone").value;
+        var email=document.getElementById("email").value;
+        var mark=document.getElementById("mark").value;
+        if(userName === "" || name === "" || age === "" || sex === "" || phone === "" || email === "" || mark === ""){
+            alert("请补全信息");
+        }else {
+            console.log(userName,name,age,sex,phone,email,mark);
+            this.props.onSubmit({userName,name,age,sex,phone,email,mark});
+        }
+    }
+
     render() {
         return <div>
             <div className="header">
@@ -29,7 +46,7 @@ class AddUser extends Component {
                     <input type="text" className="inputStyle" placeholder="备注" id="mark"/>
                 </div>
                 <dib>
-                    <button className="btn btn-info btnStyle">提交信息</button>
+                    <button className="btn btn-info btnStyle" onClick={this.onSubmit.bind(this)}>提交信息</button>
                 </dib>
             </div>
         </div>

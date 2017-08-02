@@ -6,10 +6,11 @@ import User from "./container/user";
 import AddUser from "./container/addUser";
 import reducer from "./reducer/index";
 import {createStore, applyMiddleware} from 'redux';
+import addMiddleware from "./middleware/add";
 
 
 
-const createStoreWithMiddleware = applyMiddleware()(createStore);
+const createStoreWithMiddleware = applyMiddleware(addMiddleware)(createStore);
 
 const store = createStoreWithMiddleware(reducer);
 
