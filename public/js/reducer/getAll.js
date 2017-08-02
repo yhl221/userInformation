@@ -1,12 +1,9 @@
-module.exports=({state:''})=>{
-
-}
-
-module.exports = ((state={isSaved:''},action)=>{
+module.exports=((state={users:''},action)=>{
+    console.log(action.type);
     switch(action.type){
-        case 'ADDUSER':{
-            return({isSaved:action.isSaved});
-        }
-        default: return state;
+        case 'GETALLUSER':
+            return ({users:action.users});
+        default:
+            return state;
     }
 });
