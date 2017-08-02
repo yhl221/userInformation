@@ -3,8 +3,11 @@ import {render} from "react-dom";
 import {Provider} from "react-redux";
 import {Router, Route, IndexRoute, browserHistory} from 'react-router';
 import User from "./container/user";
+import AddUser from "./container/addUser";
 import reducer from "./reducer/index";
 import {createStore, applyMiddleware} from 'redux';
+
+
 
 const createStoreWithMiddleware = applyMiddleware()(createStore);
 
@@ -13,6 +16,6 @@ const store = createStoreWithMiddleware(reducer);
 render(
     <Provider store={store}>
         <Router history={browserHistory}>
-            <Route path="/" component={User}/>
+            <Route path="/" component={AddUser}/>
         </Router>
     </Provider>, document.getElementById('app'));

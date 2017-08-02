@@ -1,0 +1,24 @@
+h1{
+    color: #b4a078;
+    font-family: "AR PL UKai CN","Noto Sans CJK JP Bold";
+}
+
+.header{
+    text-align: center;
+    margin-top:50px;
+}
+
+.inputStyle{
+    margin-bottom: 15px;
+    margin-left: 25%;
+    width: 50%;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+}
+
