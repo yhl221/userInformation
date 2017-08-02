@@ -6,7 +6,7 @@ export default store => next => action => {
         console.log("action: ",action.type);
         request.post('/getAllUser')
             .end((err, res)=> {
-                next({type: "GETALLUSER", isFind: res.body})
+                next({type: "GETALLUSER", users: res.body})
             })
     } else {
         next(action);
