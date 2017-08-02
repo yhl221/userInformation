@@ -1,7 +1,7 @@
 {
   "App":{
     "dbConfig":{
-      "dbName":"second-sale"
+      "dbName":"users"
     }
   }
 }
