@@ -1,5 +1,5 @@
-module.exports=((state={users:''},action)=>{
-    console.log(action.type);
+module.exports=((state={users:[]},action)=>{
+    console.log("reducer",action.users );
     switch(action.type){
         case 'GETALLUSER':
             return ({users:action.users});

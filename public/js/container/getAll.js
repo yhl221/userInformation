@@ -1,12 +1,13 @@
 import {connect} from "react-redux";
 import Home from "../component/home";
 
-
-const mapStateToProps=(state)=>{
+const mapStateToProps = (state)=> {
+    console.log("usrs+++",state);
     return {
-
+        user:state.GetUser.users
     }
 };
+
 
 const mapDispatchToProps=(dispatch)=>{
     return {
