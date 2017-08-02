@@ -29,7 +29,7 @@ class AddUser extends Component {
                     <input type="text" className="inputStyle" placeholder="备注" id="mark"/>
                 </div>
                 <dib>
-                    <button>提交信息</button>
+                    <button className="btn btn-info btnStyle">提交信息</button>
                 </dib>
             </div>
         </div>
