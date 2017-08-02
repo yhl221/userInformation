@@ -5,9 +5,9 @@ import {Router, Route, IndexRoute, browserHistory} from 'react-router';
 import User from "./container/user";
 import AddUser from "./container/addUser";
 import reducer from "./reducer/index";
+import Home from "./container/home";
 import {createStore, applyMiddleware} from 'redux';
 import addMiddleware from "./middleware/add";
-
 
 
 const createStoreWithMiddleware = applyMiddleware(addMiddleware)(createStore);
@@ -17,6 +17,7 @@ const store = createStoreWithMiddleware(reducer);
 render(
     <Provider store={store}>
         <Router history={browserHistory}>
-            <Route path="/" component={AddUser}/>
+            <Route path="/" component={Home}/>
+            <Route path="/add" component={AddUser}/>
         </Router>
     </Provider>, document.getElementById('app'));
