@@ -8,6 +8,7 @@ app.use(express.static('public'));
 
 
 const insertUser=require("./server/routers/addUser");
+const getAllUser=require("./server/routers/getAll");
 
 
 app.use(bodyParser.json());
@@ -15,7 +16,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static('./public'));
 
 app.use('/',insertUser);
-
+app.use('/',getAllUser);
 
 
 
