@@ -1,9 +1,10 @@
 import request from "superagent";
 
 export default store => next => action =>{
-    console.log(action)
-    if(action.type === "POSTMESSAGE"){
-        request.post('/postMessage')
+    console.log(action);
+    console.log(typeof action.data.age);
+    if(action.type === "ADDUSER"){
+        request.post('/insertUser')
             .send({
                 userName:action.data.userName,
                 name:action.data.name,
@@ -13,7 +14,8 @@ export default store => next => action =>{
                 email:action.data.email,
                 mark:action.data.mark})
             .end((err,res)=>{
-                next({type:"POSTMESSAGE",isSaved:res.body});
+                console.log(res.body);
+                next({type:"ADDUSER",isSaved:res.body});
             });
     }else{
          next(action);
