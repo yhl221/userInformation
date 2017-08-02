@@ -7,14 +7,14 @@ app.use(express.static('public'));
 
 
 
-const inserUser=require("./server/dbs/addUser");
+const insertUser=require("./server/routers/addUser");
 
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static('./public'));
 
-app.use('/',inserUser);
+app.use('/',insertUser);
 
 
 

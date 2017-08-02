@@ -1,7 +1,7 @@
 import request from "superagent";
 
 export default store => next => action =>{
-    console.log(action);
+    console.log(action.type);
     console.log(typeof action.data.age);
     if(action.type === "ADDUSER"){
         request.post('/insertUser')
