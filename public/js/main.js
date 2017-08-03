@@ -8,10 +8,11 @@ import reducer from "./reducer/index";
 import Home from "./container/getAll";
 import {createStore, applyMiddleware} from 'redux';
 import addMiddleware from "./middleware/add";
-import getAllMiddleware from "./middleware/getAll"
+import getAllMiddleware from "./middleware/getAll";
+import modifyMiddleware from "./middleware/modify"
 
 
-const createStoreWithMiddleware = applyMiddleware(addMiddleware,getAllMiddleware)(createStore);
+const createStoreWithMiddleware = applyMiddleware(addMiddleware,getAllMiddleware,modifyMiddleware)(createStore);
 
 const store = createStoreWithMiddleware(reducer);
 
