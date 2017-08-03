@@ -13,8 +13,14 @@ export default store => next => action => {
             .end((err, res)=> {
                 next({type: "SEARCHUSER", userInformation: res.body.information})
             })
-    }
-    else {
+    }else if(action.type === "REMOVEUSER"){
+        request.post('/removeUser')
+        console.log(action.data)
+            .send({type: "REMOVEUSER", userID: action.data})
+            .end((err, res)=> {
+                next({type: "REMOVEUSER", isRemoved: res.body})
+            });
+    } else {
         next(action);
     }
 }
