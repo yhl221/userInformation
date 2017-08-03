@@ -4,7 +4,7 @@ module.exports=((state={users:[],oneuser:[]},action)=>{
         case 'GETALLUSER':
             return ({users:action.users});
         case "MODIFYUSER":
-            return ({onUser:action.data});
+            return ({oneUser:action.data});
         default:
             return state;
     }
