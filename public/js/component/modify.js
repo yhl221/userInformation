@@ -13,6 +13,11 @@ class Modify extends Component{
             document.getElementById("mark").value=information.mark;
         }
 
+
+    submitModify(){
+        this.props.onModify(this.props.oneUser.user_id);
+    }
+
     render(){
 
         return <div>
@@ -21,7 +26,7 @@ class Modify extends Component{
             </div>
             <div>
                 <div>
-                    <input type="text" className="inputStyle" id="userName"placeholder="用户名"/>
+                    <input type="text" className="inputStyle" id="userName"/>
                 </div>
                 <div>
                     <input type="text" className="inputStyle"  id="name"/>
@@ -42,7 +47,7 @@ class Modify extends Component{
                     <input type="text" className="inputStyle"  id="mark"/>
                 </div>
                 <dib>
-                    <button className="btn btn-info btnStyle">提交信息</button>
+                    <button className="btn btn-info btnStyle" onClick={this.submitModify.bind(this)}>提交信息</button>
                 </dib>
             </div>
         </div>
