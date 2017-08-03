@@ -3,6 +3,7 @@ import React, {Component} from "react";
 class Modify extends Component{
 
     componentWillMount(){
+        console.log("this.state",this.props.oneUser);
     }
 
     render(){
