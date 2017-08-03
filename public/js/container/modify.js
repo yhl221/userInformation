@@ -1,9 +1,9 @@
 import {connect} from "react-redux";
 import Modify from "../component/modify";
 const mapStateToProps= (state) => {
-    console.log("modify",state.GetUser.oneUser);
+    console.log("modify",state.Home.oneUser);
     return{
-        oneUser:state.GetUser.oneUser
+        oneUser:state.Home.oneUser
     }
 };
 
