@@ -22,15 +22,21 @@ class Home extends Component {
         browserHistory.push('/add');
     }
 
+    onSearch(){
+        var userName=document.getElementById("userName").value;
+        console.log(userName);
+        this.props.onSearch();
+    }
+
     render() {
         return <div>
             <div className="header">
                 <h1 className="theme">用户信息管理</h1>
             </div>
             <div className="input-group col-md-4 col-md-offset-4 search searchInput">
-                <input type="text" className="form-control inputStyle textInput userInput btn-lg" placeholder="请输入剧目名称"/>
+                <input type="text" className="form-control inputStyle textInput userInput btn-lg" placeholder="请输入用户名" id="userName"/>
                 <span className="input-group-btn">
-                     <button className="btn btn-default btn-search inputStyle infoButton">查找</button>
+                     <button className="btn btn-default btn-search inputStyle infoButton" onClick={this.onSearch.bind(this)}>查找</button>
                 <button className="btn btn-default btn-search inputStyle infoButton little" onClick={this.onAdd.bind(this)}>添加</button>
             </span>
         </div>
