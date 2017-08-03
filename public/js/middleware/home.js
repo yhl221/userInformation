@@ -11,7 +11,7 @@ export default store => next => action => {
         request.post('/searchUser')
             .send({type:"SEARCHUSER",userID:action.data})
             .end((err, res)=> {
-                next({type: "SEARCHUSER", userInformation: res.body})
+                next({type: "SEARCHUSER", userInformation: res.body.information})
             })
     }
     else {
