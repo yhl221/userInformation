@@ -16,6 +16,10 @@ const mapDispatchToProps=(dispatch)=>{
         },
         onModify:(user)=>{
             dispatch({type:"ONMODIFY",data:user});
+        },
+        onSearch:(userName)=>{
+            console.log(userName);
+            dispatch({type:"SEARCHUSER",data:userName});
         }
     }
 };
