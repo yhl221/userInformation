@@ -9,8 +9,9 @@ const mapStateToProps= (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return{
-      onModify:(id)=>{
-          dispatch({type:"MODIFYUSER",data:id});
+      onModify:(data)=>{
+          console.log("userdata:::::",data);
+          dispatch({type:"MODIFYUSER",data:data});
       }
   }
 };
