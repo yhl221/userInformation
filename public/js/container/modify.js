@@ -9,7 +9,9 @@ const mapStateToProps= (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return{
-
+      onModify:(id)=>{
+          dispatch({type:"MODIFYUSER",data:id});
+      }
   }
 };
 export default connect(mapStateToProps,mapDispatchToProps)(Modify);
