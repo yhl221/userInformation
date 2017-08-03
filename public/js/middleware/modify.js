@@ -6,6 +6,7 @@ export default store => next => action =>{
         request.post('/modifyUser')
             .send({type:"MODIFYUSER",data:action.data})
             .end((err,req)=>{
+                console.log("isModify",req.body)
                 next({type:"MODIFYUSER",isModify:req.body});
             })
     }else{

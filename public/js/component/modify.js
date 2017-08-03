@@ -1,10 +1,11 @@
 import React, {Component} from "react";
+import {browserHistory} from 'react-router';
 
 class Modify extends Component{
 
     componentDidMount(){
             var information=this.props.oneUser;
-        console.log("information",information);
+             console.log("information",information);
             document.getElementById("userName").value=information.user_name;
             document.getElementById("name").value=information.name;
             document.getElementById("age").value=information.age;
@@ -25,9 +26,17 @@ class Modify extends Component{
         data.email=document.getElementById("email").value;
         data.mark=document.getElementById("mark").value;
         data.user_id=this.props.oneUser.user_id;
-        console.log("data",data);
         this.props.onModify(data);
+        browserHistory.push('/');
     }
+    //
+    // componentDidUpdate(){
+    //     if(this.props.isModify === true){
+    //         alert("success");
+    //     }else{
+    //         alert("修改失败！！");
+    //     }
+    // }
 
     render(){
 

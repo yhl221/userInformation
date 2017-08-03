@@ -9,6 +9,7 @@ class Home extends Component{
     }
 
     onModify(data){
+        console.log("data",data);
         this.props.onModify(data);
         browserHistory.push('/modify');
     }
