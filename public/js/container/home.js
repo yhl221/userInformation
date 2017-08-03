@@ -2,9 +2,10 @@ import {connect} from "react-redux";
 import Home from "../component/home";
 
 const mapStateToProps = (state)=> {
-    console.log("usrs+++",state);
+    console.log("usersInformation+++",state);
     return {
-        user:state.Home.users
+        user:state.Home.users,
+        information:state.Home.information
     }
 };
 
