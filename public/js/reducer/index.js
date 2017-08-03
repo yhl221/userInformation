@@ -1,7 +1,7 @@
 import {combineReducers} from 'redux';
 import AddUser from "./add";
-import GetUser from "./home";
+import Home from "./home";
 export default combineReducers({
     AddUser,
-    GetUser
+    Home
 });
