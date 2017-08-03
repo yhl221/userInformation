@@ -15,7 +15,8 @@ class Home extends Component {
     }
 
     onRemove(userID) {
-        this.props.onRemove(userID);
+        console.log(userID);
+      /*  this.props.onRemove(userID);*/
     }
 
     onAdd(){
@@ -70,7 +71,7 @@ class Home extends Component {
                                            onClick={this.onModify.bind(this, element)}/></td>
                                 <td>
                                     <button type="button" className="dangerButton  btn btn-default"
-                                            onClick={this.onRemove.bind(this, element)}>
+                                            onClick={this.onRemove.bind(this, element.user_id)}>
                                         删除
                                     </button>
                                 </td>
