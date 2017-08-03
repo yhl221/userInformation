@@ -9,31 +9,29 @@ class Home extends Component {
     }
 
     onModify(data) {
-        console.log("data", data);
         this.props.onModify(data);
         browserHistory.push('/modify');
     }
 
     onRemove(userID) {
-        console.log(userID);
-       this.props.onRemove(userID);
+        this.props.onRemove(userID);
     }
 
-    onAdd(){
+    onAdd() {
         browserHistory.push('/add');
     }
 
-    onSearch(){
-        var userID=document.getElementById("userName").value;
-        console.log(userID);
-        this.props.onSearch(userID);
+    onSearch() {
+        var userID = document.getElementById("userName").value;
+        console.log("userID",userID);
+        if (userID) {
+            this.props.onSearch(userID);
+        }
     }
 
-    componentDidUpdate(){
-        console.log("dadfafa");
-        var isRemoved=this.props.isRemoved;
-        if(isRemoved === true){
-            console.log("dadfafa");
+    componentDidUpdate() {
+        var isRemoved = this.props.isRemoved;
+        if (isRemoved === true) {
             this.props.getAllUser();
         }
     }
@@ -44,12 +42,15 @@ class Home extends Component {
                 <h1 className="theme">用户信息管理</h1>
             </div>
             <div className="input-group col-md-4 col-md-offset-4 search searchInput">
-                <input type="text" className="form-control inputStyle textInput userInput btn-lg" placeholder="请输入用户名" id="userName"/>
+                <input type="text" className="form-control inputStyle textInput userInput btn-lg" placeholder="请输入用户名"
+                       id="userName"/>
                 <span className="input-group-btn">
-                     <button className="btn btn-default btn-search inputStyle infoButton" onClick={this.onSearch.bind(this)}>查找</button>
-                <button className="btn btn-default btn-search inputStyle infoButton little" onClick={this.onAdd.bind(this)}>添加</button>
+                     <button className="btn btn-default btn-search inputStyle infoButton"
+                             onClick={this.onSearch.bind(this)}>查找</button>
+                <button className="btn btn-default btn-search inputStyle infoButton little"
+                        onClick={this.onAdd.bind(this)}>添加</button>
             </span>
-        </div>
+            </div>
             <div classID="display" className="tablePosition">
                 <table className="table table-bordered textStyle">
                     <tbody className="tableStyle">
