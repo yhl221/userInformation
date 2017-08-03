@@ -4,7 +4,7 @@ module.exports=((state={users:[],information:[]},action)=>{
         case 'GETALLUSER':
             return ({users:action.users});
         case "SEARCHUSER":
-            return ({information:action.userInformation})
+            return ({users:action.userInformation})
         default:
             return state;
     }

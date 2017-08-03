@@ -4,8 +4,7 @@ import Home from "../component/home";
 const mapStateToProps = (state)=> {
     console.log("usersInformation+++",state);
     return {
-        user:state.Home.users,
-        information:state.Home.information
+        user:state.Home.users
     }
 };
 
