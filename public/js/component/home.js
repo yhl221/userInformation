@@ -8,9 +8,13 @@ class Home extends Component{
         this.props.getAllUser();
     }
 
-    onModify(userID){
-        this.props.onModify(userID);
-        browserHistory.push('/modify');
+    onModify(id){
+        let path={
+            pathname:'/modify',
+            state:id
+        };
+        this.props.onModify();
+        browserHistory.push(path);
     }
 
     onRemove(userID){
