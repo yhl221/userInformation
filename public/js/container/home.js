@@ -4,7 +4,8 @@ import Home from "../component/home";
 const mapStateToProps = (state)=> {
     console.log("usersInformation+++",state);
     return {
-        user:state.Home.users
+        user:state.Home.users,
+        isRemoved:state.Remove.isRemoved
     }
 };
 

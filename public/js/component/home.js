@@ -29,6 +29,15 @@ class Home extends Component {
         this.props.onSearch(userID);
     }
 
+    componentDidUpdate(){
+        console.log("dadfafa");
+        var isRemoved=this.props.isRemoved;
+        if(isRemoved === true){
+            console.log("dadfafa");
+            this.props.getAllUser();
+        }
+    }
+
     render() {
         return <div>
             <div className="header">
