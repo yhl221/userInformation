@@ -16,7 +16,7 @@ class Home extends Component {
 
     onRemove(userID) {
         console.log(userID);
-      /*  this.props.onRemove(userID);*/
+       this.props.onRemove(userID);
     }
 
     onAdd(){

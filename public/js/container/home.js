@@ -18,8 +18,11 @@ const mapDispatchToProps=(dispatch)=>{
             dispatch({type:"ONMODIFY",data:user});
         },
         onSearch:(userID)=>{
-            console.log(userID);
             dispatch({type:"SEARCHUSER",data:userID});
+        },
+        onRemove:(userID)=>{
+            console.log(userID);
+            dispatch({type:"REMOVEUSER",data:userID});
         }
     }
 };
