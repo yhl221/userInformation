@@ -11,6 +11,7 @@ const insertUser=require("./server/routers/addUser");
 const getAllUser=require("./server/routers/getAll");
 const modifyUser=require("./server/routers/modifyUser");
 const searchUser=require("./server/routers/searchUser");
+const removeUser=require("./server/routers/removeUser");
 
 
 app.use(bodyParser.json());
@@ -21,7 +22,7 @@ app.use('/',insertUser);
 app.use('/',getAllUser);
 app.use('/',modifyUser);
 app.use('/',searchUser);
-
+app.use('/',removeUser);
 
 
 app.get('*', (req, res) => {

@@ -15,7 +15,6 @@ export default store => next => action => {
             })
     }else if(action.type === "REMOVEUSER"){
         request.post('/removeUser')
-        console.log(action.data)
             .send({type: "REMOVEUSER", userID: action.data})
             .end((err, res)=> {
                 next({type: "REMOVEUSER", isRemoved: res.body})
