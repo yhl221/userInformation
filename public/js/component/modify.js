@@ -46,25 +46,25 @@ class Modify extends Component{
             </div>
             <div>
                 <div>
-                    <input type="text" className="inputStyle" id="userName"/>
+                    <input type="text" className="addInputStyle" id="userName"/>
                 </div>
                 <div>
-                    <input type="text" className="inputStyle"  id="name"/>
+                    <input type="text" className="addInputStyle"  id="name"/>
                 </div>
                 <div>
-                    <input type="text" className="inputStyle"  id="age"/>
+                    <input type="text" className="addInputStyle"  id="age"/>
                 </div>
                 <div>
-                    <input type="text" className="inputStyle"  id="sex"/>
+                    <input type="text" className="addInputStyle"  id="sex"/>
                 </div>
                 <div>
-                    <input type="text" className="inputStyle"  id="phone"/>
+                    <input type="text" className="addInputStyle"  id="phone"/>
                 </div>
                 <div>
-                    <input type="text" className="inputStyle"  id="email"/>
+                    <input type="text" className="addInputStyle"  id="email"/>
                 </div>
                 <div>
-                    <input type="text" className="inputStyle"  id="mark"/>
+                    <input type="text" className="addInputStyle"  id="mark"/>
                 </div>
                 <dib>
                     <button className="btn btn-info btnStyle" onClick={this.submitModify.bind(this)}>提交信息</button>
