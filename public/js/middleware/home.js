@@ -9,6 +9,7 @@ export default store => next => action => {
             })
     }else if(action.type === "SEARCHUSER"){
         request.post('/searchUser')
+            .send({type:"SEARCHUSER",userName:action.data})
             .end((err, res)=> {
                 next({type: "SEARCHUSER", userName: res.body})
             })
