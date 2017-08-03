@@ -1,4 +1,6 @@
 import React, {Component} from "react";
+import {browserHistory} from 'react-router';
+
 
 class AddUser extends Component {
 
@@ -6,6 +8,7 @@ class AddUser extends Component {
         var isSaved=this.props.isSaved;
         if(isSaved){
             alert("添加成功");
+            browserHistory.push('/');
         }else{
             alert("添加失败");
         }

@@ -18,6 +18,10 @@ class Home extends Component {
         this.props.onRemove(userID);
     }
 
+    onAdd(){
+        browserHistory.push('/add');
+    }
+
     render() {
         return <div>
             <div className="header">
@@ -27,7 +31,7 @@ class Home extends Component {
                 <input type="text" className="form-control inputStyle textInput userInput btn-lg" placeholder="请输入剧目名称"/>
                 <span className="input-group-btn">
                      <button className="btn btn-default btn-search inputStyle infoButton">查找</button>
-                <button className="btn btn-default btn-search inputStyle infoButton little">添加</button>
+                <button className="btn btn-default btn-search inputStyle infoButton little" onClick={this.onAdd.bind(this)}>添加</button>
             </span>
         </div>
             <div classID="display" className="tablePosition">
