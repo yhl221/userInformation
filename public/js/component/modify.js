@@ -25,6 +25,7 @@ class Modify extends Component{
         data.email=document.getElementById("email").value;
         data.mark=document.getElementById("mark").value;
         data.user_id=this.props.oneUser.user_id;
+        console.log("data",data);
         this.props.onModify(data);
     }
 

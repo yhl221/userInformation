@@ -9,8 +9,6 @@ router.post('/insertUser',(req,res)=>{
     for(let key in data){
         userInformation.push(data[key]);
     }
-
-    console.log(userInformation);
     insertUser(userInformation,(result)=>{
         res.send(true);
     })

@@ -1,9 +1,18 @@
 const express=require("express");
 const router=express.Router();
+const modifyUser=require('../dbs/modify');
+
 
 router.post('/modifyUser',(req,res)=>{
-    console.log('sdjfkdsjgf');
-    console.log("req+++",req.body);
+    const object=req.body.data;
+    const information=[];
+    for(let key in object){
+        information.push(object[key]);
+    }
+    console.log("information+++++",information);
+    modifyUser(information,(result)=>{
+        res.send(true);
+    });
 });
 
 module.exports=router;
