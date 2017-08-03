@@ -14,9 +14,9 @@ const mapDispatchToProps=(dispatch)=>{
         getAllUser:()=>{
             dispatch({type:"GETALLUSER"});
         },
-        onModify:(userID)=>{
+        onModify:(user)=>{
             console.log("userID",userID);
-            dispatch({type:"MODIFYUSER",data:userID});
+            dispatch({type:"MODIFYUSER",data:user});
         }
     }
 };
