@@ -13,6 +13,10 @@ const mapDispatchToProps=(dispatch)=>{
     return {
         getAllUser:()=>{
             dispatch({type:"GETALLUSER"});
+        },
+        onModify:(userID)=>{
+            console.log("userID",userID);
+            dispatch({type:"MODIFYUSER",data:userID});
         }
     }
 };
