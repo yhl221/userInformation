@@ -7,7 +7,13 @@ export default store => next => action => {
             .end((err, res)=> {
                 next({type: "GETALLUSER", users: res.body.users})
             })
-    }else {
+    }else if(action.type === "SEARCHUSER"){
+        request.post('/searchUser')
+            .end((err, res)=> {
+                next({type: "SEARCHUSER", userName: res.body})
+            })
+    }
+    else {
         next(action);
     }
 }
