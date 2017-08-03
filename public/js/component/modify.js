@@ -15,6 +15,16 @@ class Modify extends Component{
 
 
     submitModify(){
+        let data={};
+        data.user_name=document.getElementById("userName").value;
+        data.name=document.getElementById("name").value;
+        data.age=document.getElementById("age").value;
+        data.sex=document.getElementById("sex").value;
+        data.phone=document.getElementById("phone").value;
+        data.email=document.getElementById("email").value;
+        data.mark=document.getElementById("mark").value;
+        data.user_id=this.props.oneUser.user_id;
+        console.log(data);
         this.props.onModify(this.props.oneUser.user_id);
     }
 
