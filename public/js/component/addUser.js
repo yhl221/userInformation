@@ -34,25 +34,25 @@ class AddUser extends Component {
             </div>
             <div>
                 <div>
-                    <input type="text" className="inputStyle" placeholder="用户名" id="userName"/>
+                    <input type="text" className="addInputStyle" placeholder="用户名" id="userName"/>
                 </div>
                 <div>
-                    <input type="text" className="inputStyle" placeholder="姓名" id="name"/>
+                    <input type="text" className="addInputStyle" placeholder="姓名" id="name"/>
                 </div>
                 <div>
-                    <input type="text" className="inputStyle" placeholder="年龄" id="age"/>
+                    <input type="text" className="addInputStyle" placeholder="年龄" id="age"/>
                 </div>
                 <div>
-                    <input type="text" className="inputStyle" placeholder="性别" id="sex"/>
+                    <input type="text" className="addInputStyle" placeholder="性别" id="sex"/>
                 </div>
                 <div>
-                    <input type="text" className="inputStyle" placeholder="移动电话" id="phone"/>
+                    <input type="text" className="addInputStyle" placeholder="移动电话" id="phone"/>
                 </div>
                 <div>
-                    <input type="text" className="inputStyle" placeholder="电子邮件" id="email"/>
+                    <input type="text" className="addInputStyle" placeholder="电子邮件" id="email"/>
                 </div>
                 <div>
-                    <input type="text" className="inputStyle" placeholder="备注" id="mark"/>
+                    <input type="text" className="addInputStyle" placeholder="备注" id="mark"/>
                 </div>
                 <dib>
                     <button className="btn btn-info btnStyle" onClick={this.onSubmit.bind(this)}>提交信息</button>

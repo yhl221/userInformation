@@ -1,28 +1,35 @@
 import React, {Component} from "react";
 import {browserHistory} from 'react-router';
 
-class Home extends Component{
+class Home extends Component {
 
 
-    componentWillMount(){
+    componentWillMount() {
         this.props.getAllUser();
     }
 
-    onModify(data){
-        console.log("data",data);
+    onModify(data) {
+        console.log("data", data);
         this.props.onModify(data);
         browserHistory.push('/modify');
     }
 
-    onRemove(userID){
+    onRemove(userID) {
         this.props.onRemove(userID);
     }
 
-    render(){
+    render() {
         return <div>
             <div className="header">
                 <h1 className="theme">用户信息管理</h1>
             </div>
+            <div className="input-group col-md-4 col-md-offset-4 search searchInput">
+                <input type="text" className="form-control inputStyle textInput userInput btn-lg" placeholder="请输入剧目名称"/>
+                <span className="input-group-btn">
+                     <button className="btn btn-default btn-search inputStyle infoButton">查找</button>
+                <button className="btn btn-default btn-search inputStyle infoButton little">添加</button>
+            </span>
+        </div>
             <div classID="display" className="tablePosition">
                 <table className="table table-bordered textStyle">
                     <tbody className="tableStyle">
@@ -38,7 +45,7 @@ class Home extends Component{
                         <th className="textStyle" colSpan="2">操作</th>
                     </tr>
                     {
-                        this.props.user.map((element)=>{
+                        this.props.user.map((element)=> {
                             return <tr>
                                 <td className="textStyle">{element.user_id}</td>
                                 <td className="textStyle">{element.user_name}</td>
@@ -49,9 +56,13 @@ class Home extends Component{
                                 <td className="textStyle">{element.email}</td>
                                 <td className="textStyle">{element.mark}</td>
                                 <td><input type="button" value="修改"
-                                           className="infoButton  btn btn-default" onClick={this.onModify.bind(this,element)}/></td>
-                                <td><button type="button" className="dangerButton  btn btn-default" onClick={this.onRemove.bind(this,element)}>
-                                    删除</button>
+                                           className="infoButton  btn btn-default"
+                                           onClick={this.onModify.bind(this, element)}/></td>
+                                <td>
+                                    <button type="button" className="dangerButton  btn btn-default"
+                                            onClick={this.onRemove.bind(this, element)}>
+                                        删除
+                                    </button>
                                 </td>
                             </tr>
                         })

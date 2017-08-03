@@ -26,3 +26,34 @@
 .tableStyle{
     width:60%
 }
+
+.inputStyle{
+    height:45px;
+    color: black;
+    margin-bottom: 20px;
+}
+
+.myInput{
+    display: inline
+}
+
+.searchInput{
+    width:30px;
+    height:36px
+}
+
+.little{
+    margin-left: 5px !important;
+}
+
+.searchInput{
+    margin-bottom: 30px;
+}
+
+.textInput{
+    height:40px
+}
+
+.userInput{
+    height:45px !important;
+}
