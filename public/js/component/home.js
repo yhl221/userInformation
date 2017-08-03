@@ -23,9 +23,9 @@ class Home extends Component {
     }
 
     onSearch(){
-        var userName=document.getElementById("userName").value;
-        console.log(userName);
-        this.props.onSearch(userName);
+        var userID=document.getElementById("userName").value;
+        console.log(userID);
+        this.props.onSearch(userID);
     }
 
     render() {

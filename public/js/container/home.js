@@ -17,9 +17,9 @@ const mapDispatchToProps=(dispatch)=>{
         onModify:(user)=>{
             dispatch({type:"ONMODIFY",data:user});
         },
-        onSearch:(userName)=>{
-            console.log(userName);
-            dispatch({type:"SEARCHUSER",data:userName});
+        onSearch:(userID)=>{
+            console.log(userID);
+            dispatch({type:"SEARCHUSER",data:userID});
         }
     }
 };
