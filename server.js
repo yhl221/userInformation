@@ -9,6 +9,7 @@ app.use(express.static('public'));
 
 const insertUser=require("./server/routers/addUser");
 const getAllUser=require("./server/routers/getAll");
+const modifyUser=require("./server/routers/modifyUser");
 
 
 app.use(bodyParser.json());
@@ -17,6 +18,7 @@ app.use(express.static('./public'));
 
 app.use('/',insertUser);
 app.use('/',getAllUser);
+app.use('/',modifyUser);
 
 
 

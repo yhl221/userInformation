@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import {browserHistory} from 'react-router';
 
 class Home extends Component{
 
@@ -9,6 +10,7 @@ class Home extends Component{
 
     onModify(userID){
         this.props.onModify(userID);
+        browserHistory.push('/modify');
     }
 
     onRemove(userID){

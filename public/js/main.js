@@ -4,6 +4,7 @@ import {Provider} from "react-redux";
 import {Router, Route, IndexRoute, browserHistory} from 'react-router';
 import User from "./container/user";
 import AddUser from "./container/addUser";
+import Modify from "./container/modify"
 import reducer from "./reducer/index";
 import Home from "./container/getAll";
 import {createStore, applyMiddleware} from 'redux';
@@ -21,5 +22,6 @@ render(
         <Router history={browserHistory}>
             <Route path="/" component={Home}/>
             <Route path="/add" component={AddUser}/>
+            <Route path="/modify" component={Modify}/>
         </Router>
     </Provider>, document.getElementById('app'));
