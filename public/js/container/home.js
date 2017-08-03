@@ -4,7 +4,7 @@ import Home from "../component/home";
 const mapStateToProps = (state)=> {
     console.log("usrs+++",state);
     return {
-        user:state.GetUser.users
+        user:state.Home.users
     }
 };
 
@@ -15,7 +15,7 @@ const mapDispatchToProps=(dispatch)=>{
             dispatch({type:"GETALLUSER"});
         },
         onModify:(user)=>{
-            dispatch({type:"MODIFYUSER",data:user});
+            dispatch({type:"ONMODIFY",data:user});
         }
     }
 };

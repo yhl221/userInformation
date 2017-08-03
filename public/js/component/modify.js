@@ -4,6 +4,7 @@ class Modify extends Component{
 
     componentDidMount(){
             var information=this.props.oneUser;
+        console.log("information",information);
             document.getElementById("userName").value=information.user_name;
             document.getElementById("name").value=information.name;
             document.getElementById("age").value=information.age;
