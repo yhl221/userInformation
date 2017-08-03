@@ -6,14 +6,13 @@ import User from "./container/user";
 import AddUser from "./container/addUser";
 import Modify from "./container/modify"
 import reducer from "./reducer/index";
-import Home from "./container/getAll";
+import Home from "./container/home";
 import {createStore, applyMiddleware} from 'redux';
 import addMiddleware from "./middleware/add";
-import getAllMiddleware from "./middleware/getAll";
-import modifyMiddleware from "./middleware/modify"
+import getAllMiddleware from "./middleware/home";
 
 
-const createStoreWithMiddleware = applyMiddleware(addMiddleware,getAllMiddleware,modifyMiddleware)(createStore);
+const createStoreWithMiddleware = applyMiddleware(addMiddleware,getAllMiddleware)(createStore);
 
 const store = createStoreWithMiddleware(reducer);
 

@@ -8,13 +8,9 @@ class Home extends Component{
         this.props.getAllUser();
     }
 
-    onModify(id){
-        let path={
-            pathname:'/modify',
-            state:id
-        };
-        this.props.onModify();
-        browserHistory.push(path);
+    onModify(data){
+        this.props.onModify(data);
+        browserHistory.push('/modify');
     }
 
     onRemove(userID){
@@ -52,8 +48,8 @@ class Home extends Component{
                                 <td className="textStyle">{element.email}</td>
                                 <td className="textStyle">{element.mark}</td>
                                 <td><input type="button" value="修改"
-                                           className="infoButton  btn btn-default" onClick={this.onModify.bind(this,element.user_id)}/></td>
-                                <td><button type="button" className="dangerButton  btn btn-default" onClick={this.onRemove.bind(this,element.user_id)}>
+                                           className="infoButton  btn btn-default" onClick={this.onModify.bind(this,element)}/></td>
+                                <td><button type="button" className="dangerButton  btn btn-default" onClick={this.onRemove.bind(this,element)}>
                                     删除</button>
                                 </td>
                             </tr>

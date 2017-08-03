@@ -3,8 +3,6 @@ import React, {Component} from "react";
 class Modify extends Component{
 
     componentWillMount(){
-        console.log("ID++",this.props.location);
-        this.props.findOne(this.props.location.state);
     }
 
     render(){
