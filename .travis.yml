@@ -9,7 +9,7 @@ before_script:
                            `user_id` INT UNSIGNED AUTO_INCREMENT,
                            `user_name` VARCHAR(100) NOT NULL,
                            `name` VARCHAR(50) NOT NULL,
-                           `age` VARCHAR(30) NOT NULL,
+                           `age` INT(30) NOT NULL,
                            `sex` VARCHAR(20) NOT NULL,
                            `phone` VARCHAR(100) NOT NULL,
                            `email` VARCHAR(100) NOT NULL,
