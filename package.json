@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "export NODE_ENV=test && mocha test/**/*test.js",
+    "test": "export NODE_ENV=test && mocha spec/**/*test.js",
     "start": "export NODE_ENV=development && nodemon server.js",
     "webpack": "webpack -d --watch",
     "wpw": "webpack -w",
