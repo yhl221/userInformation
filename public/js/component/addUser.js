@@ -15,6 +15,8 @@ class AddUser extends Component {
         }
     }
 
+
+
     onSubmit() {
         var userName = document.getElementById("userName").value;
         var name = document.getElementById("name").value;
@@ -29,6 +31,8 @@ class AddUser extends Component {
             this.props.onSubmit({userName, name, age, sex, phone, email, mark});
         }
     }
+
+
 
     render() {
         return <div>
@@ -64,5 +68,7 @@ class AddUser extends Component {
         </div>
     }
 }
+
+
 
 export default AddUser;
