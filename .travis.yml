@@ -1,0 +1,10 @@
+language: node_js
+node_js :
+  - "6"
+services:
+  - mongodb
+before_script:
+  - sleep 15
+  - mongo mydb_test --eval 'db.addUser("customers", "users");'
+notifications:
+  webhooks: https://hook.bearychat.com/=bw70L/travis/014933a3e77fd5d416d1a9b6ae7852a0
