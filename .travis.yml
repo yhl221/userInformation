@@ -2,9 +2,17 @@ language: node_js
 node_js :
   - "6"
 services:
-  - mongodb
+  - mysql
 before_script:
-  - sleep 15
-  - mongo mydb_test --eval 'db.addUser("customers", "users");'
-notifications:
-  webhooks: https://hook.bearychat.com/=bw70L/travis/014933a3e77fd5d416d1a9b6ae7852a0
+  - mysql -e "create database users;"
+  - mysql -e "use users;CREATE TABLE `usre_inform`(
+                           `user_id` INT UNSIGNED AUTO_INCREMENT,
+                           `user_name` VARCHAR(100) NOT NULL,
+                           `name` VARCHAR(50) NOT NULL,
+                           `age` VARCHAR(30) NOT NULL,
+                           `sex` VARCHAR(20) NOT NULL,
+                           `phone` VARCHAR(100) NOT NULL,
+                           `email` VARCHAR(100) NOT NULL,
+                           `mark` VARCHAR(100) NOT NULL,
+                           PRIMARY KEY ( `user_id` )
+                        )ENGINE=InnoDB DEFAULT CHARSET=utf8;"
