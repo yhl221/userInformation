@@ -1,6 +1,7 @@
-import request from "superagent";
 
-export default store => next => action =>{
+const request=require('superagent');
+
+module.exports= store => next => action =>{
     if(action.type === "ADDUSER"){
         request.post('/insertUser')
             .send({
@@ -18,4 +19,4 @@ export default store => next => action =>{
     }else{
          next(action);
     }
-}
+};
