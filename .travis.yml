@@ -5,7 +5,7 @@ services:
   - mysql
 before_script:
   - mysql -e "create database users;"
-  - mysql -e "use users;CREATE TABLE 'user_inform'(
+  - mysql -e "use users;CREATE TABLE user_inform(
                            'user_id' INT UNSIGNED AUTO_INCREMENT,
                            'user_name' VARCHAR(100) NOT NULL,
                            'name' VARCHAR(50) NOT NULL,
@@ -14,5 +14,5 @@ before_script:
                            'phone' VARCHAR(100) NOT NULL,
                            'email' VARCHAR(100) NOT NULL,
                            'mark' VARCHAR(100) NOT NULL,
-                           PRIMARY KEY ( 'user_id' )
+                           PRIMARY KEY ('user_id')
                         )ENGINE=InnoDB DEFAULT CHARSET=utf8;"
