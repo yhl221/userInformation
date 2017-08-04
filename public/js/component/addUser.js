@@ -6,9 +6,11 @@ class AddUser extends Component {
 
     componentDidUpdate(){
         var isSaved=this.props.isSaved;
+        console.log("isSaved++++++",isSaved);
         if(isSaved){
             alert("添加成功");
             browserHistory.push('/');
+            this.props.reset(false);
         }else{
             alert("添加失败");
         }

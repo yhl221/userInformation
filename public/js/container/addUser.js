@@ -12,8 +12,13 @@ const mapDispatchToProps = (dispatch)=>{
 
     return {
         onSubmit:(data)=>{
+            console.log("dadddddd",data);
             dispatch({type:"ADDUSER",data});
             console.log(data);
+        },
+        reset:(flag)=>{
+            console.log(flag);
+            dispatch({type:"RESET",flag});
         }
     }
 };
