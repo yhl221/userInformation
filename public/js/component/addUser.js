@@ -4,31 +4,29 @@ import {browserHistory} from 'react-router';
 
 class AddUser extends Component {
 
-    componentDidUpdate(){
-        var isSaved=this.props.isSaved;
-        console.log("isSaved++++++",isSaved);
-        if(isSaved){
+    componentDidUpdate() {
+        var isSaved = this.props.isSaved;
+        if (isSaved) {
             alert("添加成功");
             browserHistory.push('/');
             this.props.reset(false);
-        }else{
+        } else {
             alert("添加失败");
         }
     }
 
-    onSubmit(){
-         var userName=document.getElementById("userName").value;
-        var name=document.getElementById("name").value;
-        var age=document.getElementById("age").value;
-        var sex=document.getElementById("sex").value;
-        var phone=document.getElementById("phone").value;
-        var email=document.getElementById("email").value;
-        var mark=document.getElementById("mark").value;
-        if(userName === "" || name === "" || age === "" || sex === "" || phone === "" || email === "" || mark === ""){
+    onSubmit() {
+        var userName = document.getElementById("userName").value;
+        var name = document.getElementById("name").value;
+        var age = document.getElementById("age").value;
+        var sex = document.getElementById("sex").value;
+        var phone = document.getElementById("phone").value;
+        var email = document.getElementById("email").value;
+        var mark = document.getElementById("mark").value;
+        if (userName === "" || name === "" || age === "" || sex === "" || phone === "" || email === "" || mark === "") {
             alert("请补全信息");
-        }else {
-            console.log(userName,name,age,sex,phone,email,mark);
-            this.props.onSubmit({userName,name,age,sex,phone,email,mark});
+        } else {
+            this.props.onSubmit({userName, name, age, sex, phone, email, mark});
         }
     }
 

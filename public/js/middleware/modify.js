@@ -1,15 +1,15 @@
-const request=requrie("superagent");
+const request = requrie("superagent");
 
-module.exports = store => next => action =>{
-    console.log("action+++++",action);
-    if(action.type === "MODIFYUSER"){
+module.exports = store => next => action => {
+
+    if (action.type === "MODIFYUSER") {
         request.post('/modifyUser')
-            .send({type:"MODIFYUSER",data:action.data})
-            .end((err,req)=>{
-                console.log("isModify",req.body);
-                next({type:"MODIFYUSER",isModify:req.body});
+            .send({type: "MODIFYUSER", data: action.data})
+            .end((err, req)=> {
+                next({type: "MODIFYUSER", isModify: req.body});
             })
-    }else{
+    } else {
         next(action);
     }
+
 };
