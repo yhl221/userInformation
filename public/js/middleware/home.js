@@ -1,6 +1,6 @@
-import request from "superagent";
+const request=require("superagent");
 
-export default store => next => action => {
+module.exports= store => next => action => {
 
     if (action.type === "GETALLUSER") {
         request.post('/getAllUser')
