@@ -24,6 +24,7 @@ class Home extends Component {
     onSearch() {
         var userID = document.getElementById("userName").value;
         if (userID) {
+            console.log("userID");
             this.props.onSearch(userID);
         }
     }

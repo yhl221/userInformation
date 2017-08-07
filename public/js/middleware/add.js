@@ -1,4 +1,4 @@
-const request = require('superagent');
+import request from "superagent"
 
 module.exports = store => next => action => {
     if (action.type === "ADDUSER") {

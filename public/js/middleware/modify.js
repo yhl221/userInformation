@@ -1,4 +1,4 @@
-const request = requrie("superagent");
+import request from "superagent"
 
 module.exports = store => next => action => {
 
